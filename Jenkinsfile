@@ -4,7 +4,6 @@ node {
    }
    stage('Preparation') {
       git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-      mvnHome = tool 'M3'
    }
    stage('Build') {
       sh "mvn -Dmaven.test.failure.ignore clean package"
